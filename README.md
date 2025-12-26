@@ -134,19 +134,29 @@ sqlite3 data/airbnb_ab_test.db < sql/ab_test_queries.sql
 ```
 Airbnb-AB-Testing-SQL-Analysis/
 ├── data/
-│   ├── airbnb_clean.csv            # Cleaned with A/B groups
-│   └── airbnb_ab_test.db           # SQLite database
+│   ├── airbnb_raw.csv              # Raw Kaggle dataset (gitignored)
+│   ├── airbnb_clean.csv            # Cleaned with A/B groups (gitignored)
+│   └── airbnb_ab_test.db           # SQLite database (gitignored)
+├── notebooks/
+│   └── data_cleaning_and_simulation.ipynb  # Interactive analysis
+├── scripts/
+│   ├── create_visualizations.py    # Generate charts
+│   └── run_ab_analysis.py          # Main pipeline
 ├── sql/
 │   ├── ab_test_queries.sql         # Group comparisons
+│   ├── create_tables.sql           # Database schema
 │   └── metrics.sql                 # KPI calculations
-├── scripts/
-│   ├── run_ab_analysis.py          # Main pipeline
-│   └── create_visualizations.py    # Charts
-├── visualizations/                  # 6 PNG outputs
-├── notebooks/
-│   └── data_cleaning_and_simulation.ipynb
-└── dashboard/
-    └── PowerBI_Instructions.md      # BI dashboard guide
+├── visualizations/                  # Generated PNG outputs
+│   ├── ab_comparison.png
+│   ├── neighborhood_performance.png
+│   ├── price_tier_analysis.png
+│   ├── revenue_distribution.png
+│   ├── room_type_distribution.png
+│   └── statistical_summary.png
+├── .gitignore
+├── README.md
+└── requirements.txt
+
 ```
 
 ## 🎯 Skills Demonstrated
